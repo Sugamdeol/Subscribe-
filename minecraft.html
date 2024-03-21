@@ -9,7 +9,7 @@
     font-family: 'Minecraft', sans-serif;
     text-align: center;
     margin-top: 50px;
-    background-color: #1a1a1a;
+    background-color: #f0f0f0; /* Lighter background color */
   }
   .subscribe-container {
     animation: fadeIn 2s forwards;
@@ -76,11 +76,11 @@
     // Open link in new tab
     window.open('https://youtube.com/@today4gaming?si=uO-jqHDsiiSh-lKn', '_blank');
     
-    // After 20 seconds, display the "Join Channel" button
+    // After 10 seconds, display the "Join Channel" button
     setTimeout(function() {
       document.querySelector(".loading").style.display = "none";
       document.querySelector(".join-btn").style.display = "block";
-    }, 20000);
+    }, 10000);
   }
 
   function joinTelegram() {
