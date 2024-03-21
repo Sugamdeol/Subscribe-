@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Subscribe Button</title>
+<style>
+  body {
+    font-family: 'Minecraft', sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #1a1a1a;
+  }
+  .subscribe-container {
+    animation: fadeIn 2s forwards;
+  }
+  .subscribe-btn {
+    padding: 15px 30px;
+    background-color: #2ecc71;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  .subscribe-btn:hover {
+    background-color: #27ae60;
+  }
+  .join-btn {
+    display: none;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  .join-btn:hover {
+    background-color: #2980b9;
+  }
+  .loading {
+    display: none;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="subscribe-container">
+  <button class="subscribe-btn" onclick="subscribe()">Subscribe</button>
+  <p class="subscribe-text">Subscribe Our YouTube Channel To Unlock Shader</p>
+</div>
+
+<div class="join-container">
+  <button class="join-btn" onclick="joinTelegram()">Join Channel</button>
+</div>
+
+<div class="loading">Checking...</div>
+
+<script>
+  function subscribe() {
+    // Show loading message
+    document.querySelector(".loading").style.display = "block";
+    
+    // Open link in new tab
+    window.open('https://youtube.com/@today4gaming?si=uO-jqHDsiiSh-lKn', '_blank');
+    
+    // After 20 seconds, display the "Join Channel" button
+    setTimeout(function() {
+      document.querySelector(".loading").style.display = "none";
+      document.querySelector(".join-btn").style.display = "block";
+    }, 20000);
+  }
+
+  function joinTelegram() {
+    window.open('https://t.me/shorttee', '_blank');
+  }
+</script>
+
+</body>
+</html>
