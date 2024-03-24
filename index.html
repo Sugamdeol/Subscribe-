@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="monetag" content="4a0ea88940a49f6b47d7e5d1939f0599">
 <style>
 .button {
@@ -10,11 +11,12 @@
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block; /* Changed to block for better mobile display */
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 10px auto; /* Added margin for better centering */
   cursor: pointer;
   border-radius: 8px;
+  max-width: 80%; /* Added max-width for better mobile display */
 }
 
 .button:hover {
@@ -43,4 +45,3 @@ function handleClick() {
 
 </body>
 </html>
-
