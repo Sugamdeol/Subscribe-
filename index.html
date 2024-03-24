@@ -3,45 +3,23 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="monetag" content="4a0ea88940a49f6b47d7e5d1939f0599">
-<style>
-.button {
-  background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: block; /* Changed to block for better mobile display */
-  font-size: 16px;
-  margin: 10px auto; /* Added margin for better centering */
-  cursor: pointer;
-  border-radius: 8px;
-  max-width: 80%; /* Added max-width for better mobile display */
-}
-
-.button:hover {
-  background-color: #45a049;
-}
-</style>
+  <style>
+    .button {
+      display: none; /* Hide the button */
+    }
+  </style>
 </head>
 <body>
 
 <script>
-function handleClick() {
-  var button = document.getElementById("redirectButton");
-  if (button.dataset.clicked === "true") {
+  // Automatically redirect to the link after 3 seconds
+  setTimeout(function() {
     window.location.href = "https://newsy1010.blogspot.com/2024/03/unveiling-anticipated-iphone-16-series.html?m=1";
-  } else {
-    button.dataset.clicked = "true";
-    button.innerHTML = "Continue";
-    window.location.href = "https://doruffleton.com/4/4681136";
-  }
-}
+  }, 3000); // Adjust the time delay as needed (in milliseconds)
 </script>
 
-<center>
-  <button id="redirectButton" class="button" onclick="handleClick()">Get Movie</button>
-</center>
+<!-- Button is not displayed -->
+<button id="redirectButton" class="button">Get Movie</button>
 
 </body>
 </html>
